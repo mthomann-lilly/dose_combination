@@ -14,5 +14,10 @@ ed50_1 ~ dnorm(100,0.0001)I(0,)
 ed50_2 ~ dnorm(100,0.0001)I(0,)
 ed50_12 ~ dnorm(400,0.00001)I(0,)
 
+for(i in 1:N){
+prob[i] <- ilogit(theta0 + emax1*dose1[i]/(ed50_1+dose1[i]) + emax2*dose2[i]/(ed50_2+dose2[i]) +
+               emax12*dose12[i]/(ed50_12+dose12[i]))
+}
+
 }
 "
