@@ -1,7 +1,7 @@
 trt1=c(0,100,200,400)
 trt2=c(0,100,200,400)
 
-dat <- genDat_Combination()
+dat <- genDat_Combination() #get data
 
 dat_jags <- list(resp=dat$resp,dose1=dat$trt1,dose2=dat$trt2,
                  dose12=sqrt(dat$trt1*dat$trt2),N=nrow(dat),n=dat$n)

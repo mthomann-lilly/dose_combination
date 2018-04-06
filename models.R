@@ -20,4 +20,4 @@ prob[i] <- ilogit(theta0 + emax1*dose1[i]/(ed50_1+dose1[i]) + emax2*dose2[i]/(ed
 }
 
 }
-"
+" 
