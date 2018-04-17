@@ -21,9 +21,4 @@ p <- plot_ly(res,x=~trt1,y=~trt2,z=~mean,
                          colorscale = list(c(0, "rgb(255, 0, 0)"), list(1, "rgb(0, 255, 0)"))))
 p
 
-#p <- plotly(resList),
-#             marker=list(color=~mean,showscale=TRUE,
-#                         colorscale = list(c(0, "rgb(255, 0, 0)"), list(1, "rgb(0, 255, 0)")))) %>% add_surface()
-#p
-
 htmlwidgets::saveWidget(p,"/lrlhps/users/c216499/Projects/Documents/plot3d.html")
