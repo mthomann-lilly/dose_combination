@@ -9,11 +9,6 @@ resList <- list(x=matrix(as.numeric(rownames(resMat)),ncol=1),
                 y=matrix(as.numeric(colnames(resMat)),ncol=4),
                 z=resMat,type="surface")
 
-#test scatter3d
-par(mfrow=c(1,1))
-plot <- scatterplot3d(res,color="red",pch=16,grid=FALSE,box=FALSE)
-addgrids3d(res,grid=c("xy","xz","yz"),col.grid="black")
-
 #plotly
 resMat <- as.matrix(res,ncol=3,byrow=F)
 p <- plot_ly(res,x=~trt1,y=~trt2,z=~mean,

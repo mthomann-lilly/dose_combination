@@ -36,3 +36,8 @@ analyze <- function(modText,dat_combination,plot_ed50=TRUE,burn=10000,samps=5000
   return(list(mat=resMat,long=res))
 }
 
+adapt_rar <- function(results=resMat,thresh=0.2){
+  results_dat <- data.frame(results)
+  results_dat$dropArms <- as.numeric(results_dat["mean"]<thresh)
+}
+
